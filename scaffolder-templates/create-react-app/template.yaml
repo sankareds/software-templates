@@ -42,6 +42,13 @@ spec:
           type: string
           ui:field: RepoUrlPicker
           ui:options:
+            requestUserCredentials:
+              secretsKey: USER_OAUTH_TOKEN
+              additionalScopes:
+                github:
+                  - workflow
+            allowedHosts:
+              - github.com          
   steps:
     - id: template
       name: Fetch Skeleton + Template
