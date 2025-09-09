@@ -62,6 +62,7 @@ spec:
       input:
         description: This is ${{ parameters.component_id }}
         repoUrl: ${{ parameters.repoUrl }}
+        token: ${{ secrets.USER_OAUTH_TOKEN or false }}
 
     - id: register
       name: Register
